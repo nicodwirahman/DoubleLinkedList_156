@@ -93,3 +93,9 @@ while (current->next != NULL && current->next->noMhs < nim) // step 1.c
 		delete current; // step 4
 		return true;
 	}
+
+}
+
+bool DoubleLinkedList::listEmpety() {
+	return (START == NULL);
+}
