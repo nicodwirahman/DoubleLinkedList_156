@@ -128,3 +128,8 @@ void DoubleLinkedList::revtraverse() {
 			currentNode = currentNode->prev;
 		}
 	}
+}
+
+void DoubleLinkedList::hapus() {
+	if (listEmpety()) {
+		cout << "\nList is empety" << endl;
