@@ -111,3 +111,9 @@ void DoubleLinkedList::traverse() {
 			currentNode = currentNode->next;
 		}
 	}
+}
+
+void DoubleLinkedList::revtraverse() {
+	if (listEmpety()) {
+		cout << "\nList is empety" << endl;
+	}
