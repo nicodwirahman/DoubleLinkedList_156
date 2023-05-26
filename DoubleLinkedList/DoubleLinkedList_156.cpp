@@ -67,3 +67,13 @@ while (current->next != NULL && current->next->noMhs < nim) // step 1.c
 		cout << "\nDuplicate roll numbers not allowed" << endl;
 		return;
 	}
+
+	bool DoubleLinkedList::search(int rollNo, Node previous, Node current) {
+		*previous = START; // step 1.a
+		*current = START; // step 1.b
+		while (*current != NULL && rollNo != (*current)->noMhs) { // step 1.c
+			*previous = *current; // step 1.d
+			*current = (*current)->next; // step 1.e
+		}
+		return (*current != NULL);
+	}
