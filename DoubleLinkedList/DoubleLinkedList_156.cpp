@@ -99,3 +99,15 @@ while (current->next != NULL && current->next->noMhs < nim) // step 1.c
 bool DoubleLinkedList::listEmpety() {
 	return (START == NULL);
 }
+
+void DoubleLinkedList::traverse() {
+	if (listEmpety())
+		cout << "\nList is empety " << endl;
+	else {
+		cout << "\nRecords in ascending order of roll number are: " << endl;
+		Node* currentNode = START;
+		while (currentNode != NULL) {
+			cout << currentNode->noMhs << " " << currentNode->name << endl;
+			currentNode = currentNode->next;
+		}
+	}
